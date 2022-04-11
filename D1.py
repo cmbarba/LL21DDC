@@ -35,38 +35,19 @@ tor_mun_travel_time = 9.5
 # Work
 
 values = []
+names = ["Toronto","Ottawa","Montreal","Edmonton","Calgary"]
+leg1price = [van_tor_price,van_ott_price,van_mon_price,van_edm_price,van_cal_price]
+leg2price = [tor_mun_price,ott_ber_price,mon_lon_price,edm_lon_price,cal_lon_price]
+leg1time = [van_tor_travel_time,van_ott_travel_time,van_mon_travel_time,van_edm_travel_time,van_cal_travel_time]
+laytime = [tor_layover,ott_layover,mon_layover,edm_layover,cal_layover]
+leg2time = [tor_mun_travel_time,ott_ber_travel_time,mon_lon_travel_time,edm_lon_travel_time,cal_lon_travel_time]
 
-tor_price = van_tor_price + tor_mun_price
-tor_time = van_tor_travel_time + tor_layover + tor_mun_travel_time
-tor_value = tor_price / tor_time
-#print("Toronto: ",tor_value," $/hr")
-values.append(["Toronto",tor_value])
-
-ott_price = van_ott_price + ott_ber_price
-ott_time = van_ott_travel_time + ott_layover + ott_ber_travel_time
-ott_value = ott_price / ott_time
-#print("Ottawa: ",ott_value," $/hr")
-values.append(["Ottawa",ott_value])
-
-mon_price = van_mon_price + mon_lon_price
-mon_time = van_mon_travel_time + mon_layover + mon_lon_travel_time
-mon_value = mon_price / mon_time
-#print("Montreal: ",mon_value," $/hr")
-values.append(["Montreal",mon_value])
-
-edm_price = van_edm_price + edm_lon_price
-edm_time = van_edm_travel_time + edm_layover + edm_lon_travel_time
-edm_value = edm_price / edm_time
-#print("Edmonton: ",edm_value," $/hr")
-values.append(["Edmonton",edm_value])
-
-cal_price = van_cal_price + cal_lon_price
-cal_time = van_cal_travel_time + cal_layover + cal_lon_travel_time
-cal_value = cal_price / cal_time
-#print("Calgary: ",cal_value," $/hr")
-values.append(["Calgary",cal_value])
-
-j = len(values)
+i = 0
+j = len(names)
+while i < j:
+    val = (leg1price[i]+leg2price[i]) / (leg1time[i] + laytime[i] + leg2time[i])
+    values.append([names[i],val])
+    i += 1
 
 i = 1
 bestval = values[0]
@@ -75,4 +56,4 @@ while i < j:
         bestval = values[i]
     i += 1
 
-print(bestval)
+print("The best trip value comes from the",bestval[0],"route costing $",round(bestval[1],2),"per hour.")
