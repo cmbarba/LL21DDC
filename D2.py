@@ -8,4 +8,4 @@ name = '  Dot  '
 
 sname = name.strip()
 uname = sname.upper()
-print("#" + uname.strip()+"!")
+print("#" + uname+"!")
