@@ -10,7 +10,7 @@ sname = name.strip()
 uname = sname.upper()
 print("#" + uname + "!")
 
-#Alternative way, stringing methods together
+#Alternative way, chaining methods together
 
 name2 = '  Dot  '
 
