@@ -9,3 +9,10 @@ name = '  Dot  '
 sname = name.strip()
 uname = sname.upper()
 print("#" + uname + "!")
+
+#Alternative way, stringing methods together
+
+name2 = '  Dot  '
+
+name2 = name2.upper().strip()
+print(f"#{name2}!")
