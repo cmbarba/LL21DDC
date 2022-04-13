@@ -36,3 +36,22 @@ newlayout = layout
 newlayout[z[0]].insert(z[1],"O")
 newlayout[z[0]].pop(z[1])
 print(newlayout[z[0]])
+
+
+# Other Solution
+row_number = 0
+available_seats = []
+for row in layout:
+    row_number += 1
+    if row[0] == 'E' and row[1] == 'e':
+        available_seats.append([f'row {row_number}', 'first seat'])
+    if row[-1] == 'E' and row[-2] == 'e':
+        available_seats.append([f'row {row_number}', 'last seat'])
+
+print(available_seats) #first index should be closest seat
+
+#stretch
+layout[3].insert(-1, "O")
+layout[3].pop(-1)
+
+print(layout[3])
