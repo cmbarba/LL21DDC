@@ -1,4 +1,4 @@
-## Day 1 Challenge ##
+## Day 2 Challenge ##
 
 # Provided
 
@@ -12,7 +12,5 @@ print("#" + uname + "!")
 
 #Alternative way, chaining methods together
 
-name2 = '  Dot  '
-
-name2 = name2.upper().strip()
+name2 = name.upper().strip()
 print(f"#{name2}!")
