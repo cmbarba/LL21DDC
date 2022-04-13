@@ -15,15 +15,24 @@ layout = [
 
 #Conditions are consecutive E,e or e,E
 
-i = 1
+i = 0
 
 for x in layout:
     if x[0]=="E":
         if x[1]=="e":
-            print(f"Seat at Row {i} Seat 1 (Index {(i-1)},0")
+            z = [i,0]
+            print(f"Seat at Row {i+1} Seat 1 (Index {(i)},0")
             break
     if x[-1]=="E":
         if x[-2]=="e":
-            print(f"Seat at Row {i} Seat 11 (Index {(i-1)},-1)")
+            z = [i,-1]
+            print(f"Seat at Row {i+1} Seat 11 (Index {(i)},-1)")
             break
     i +=1
+
+# Stretch
+
+newlayout = layout
+newlayout[z[0]].insert(z[1],"O")
+newlayout[z[0]].pop(z[1])
+print(newlayout[z[0]])
