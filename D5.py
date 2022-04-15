@@ -26,4 +26,4 @@ for x,y in landmarks.items(): #items() gives access to both keys and values, oth
     if y < 15:
         places.append([x,y])
 
-print (places)
+print(places)
