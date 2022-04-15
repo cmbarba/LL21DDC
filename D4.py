@@ -50,3 +50,52 @@ print(meals)
 total = max(starters.values()) + max(mains.values()) + max(desserts.values()) + max(beers.values())
 tip = total * 0.1
 print(tip)
+
+
+# Solution 2
+# data
+meals = {
+    "starters": starters.items(),
+    "mains": mains.items(),
+    "desserts": desserts.items(),
+    "beers": beers.items()
+}
+
+# variables
+bill = []
+totals_list = []
+
+# function
+def update_bill(list):
+    list.sort()
+    totals_list.append(list[-1])
+    bill.clear()
+
+    
+# Find the most expensive meals
+for price in meals["starters"]: 
+    bill.append(price[1])    
+update_bill(bill)
+
+for price in meals["mains"]: 
+    bill.append(price[1])    
+update_bill(bill)
+
+for price in meals["desserts"]: 
+    bill.append(price[1])    
+update_bill(bill)
+
+for price in meals["beers"]: 
+    bill.append(price[1])    
+update_bill(bill)
+
+print(totals_list) # [10.29, 18.99, 7.9, 8.9]
+
+# Sum of meal
+total = 0
+for cost in totals_list:
+    total += cost
+
+#Calculate tip
+final = total * 0.10
+print(final) # 4.608
