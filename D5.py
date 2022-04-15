@@ -27,3 +27,18 @@ for x,y in landmarks.items(): #items() gives access to both keys and values, oth
         places.append([x,y])
 
 print(places)
+
+
+# Other solution
+
+# store landmark destinations with wait times < 15min
+destinations = []
+
+# loop for landmarks times
+for landmark in landmarks:
+    x = landmarks.get(landmark, "not found")
+    if x < 15:
+        destinations.append(landmark)
+    
+
+print(destinations)
