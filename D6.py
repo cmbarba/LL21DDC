@@ -30,3 +30,17 @@ find_the_gate(b[0],b[1])
 find_the_gate(c[0],c[1])
 
 find_the_gate(['w','n','n','w','N','n','w','N','N','w','n','n','w','n','n','W','W','W','W','n','n','w','n','n'], 'wide')
+
+# Solution 2
+def find_the_gate(spots, vehicle):
+    if vehicle == 'narrow':
+        for i in range(len(spots)):
+            if spots[i] == 'N':
+                return i
+        return False
+            
+    elif vehicle == 'wide':
+        for i in range(len(spots)):
+            if spots[i] == 'W':
+                return i
+        return False
