@@ -2,16 +2,16 @@
 
 # Provided
 
-# import pandas as pd
-# import statistics
-# df = pd.read_csv('fc_barcelona.csv')
-# df.head()
+import pandas as pd
+import statistics
+df = pd.read_csv('fc_barcelona.csv')
+df.head()
 
-# points = df.Pts
-# games_played = df.MP
-# wins = df.W
-# losses = df.L
-# attendance = df.Attendance.dropna() # skipping missing values (NaN) because there were no fans during 2020-2021 season because of COVID
+points = df.Pts
+games_played = df.MP
+wins = df.W
+losses = df.L
+attendance = df.Attendance.dropna() # skipping missing values (NaN) because there were no fans during 2020-2021 season because of COVID
 
 # Work
 
