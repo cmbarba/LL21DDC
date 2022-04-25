@@ -22,3 +22,25 @@ females = pd.read_sql("""
             """
             ,conn)
 len(females)
+
+
+###############
+# Solution 2
+
+import sqlite3
+import pandas as pd
+conn = sqlite3.connect("himalayas.db")
+
+
+# How to actually locate the tables data available 
+cur = conn.cursor()
+cur.execute('SELECT name FROM sqlite_master WHERE type = "table"').fetchall()
+# [('peaks',), ('members',), ('exped',)] <-- These are the tables we can get data from
+
+# Question 1
+peaks = pd.read_sql('select * from peaks where heightm > 8000', conn)
+print(len(peaks))
+
+# Question 2
+members = pd.read_sql('select * from members where sex == "F"', conn)
+print(len(members))
