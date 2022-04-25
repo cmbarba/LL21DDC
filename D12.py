@@ -3,7 +3,7 @@
 # Provided
 
 import pandas as pd
-df = pd.read_csv('aus_weather.csv')
+df = pd.read_csv('./csv/aus_weather.csv')
 
 # Work
 

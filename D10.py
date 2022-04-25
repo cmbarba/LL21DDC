@@ -3,7 +3,7 @@
 # Provided
 
 import pandas as pd
-df = pd.read_csv('dubai_properties_data.csv')
+df = pd.read_csv('./csv/dubai_properties_data.csv')
 
 # Work
 

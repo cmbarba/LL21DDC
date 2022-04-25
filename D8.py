@@ -4,7 +4,7 @@
 
 import pandas as pd
 
-df = pd.read_csv('paris_landmarks.csv')
+df = pd.read_csv('./csv/paris_landmarks.csv')
 
 # Work
 

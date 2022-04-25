@@ -3,7 +3,7 @@
 # Provided
 
 import pandas as pd
-df = pd.read_csv('aus_weather.csv')
+df = pd.read_csv('./csv/aus_weather.csv')
 df = df[df["Location"] == "Melbourne"]
 df.head()
 
@@ -21,7 +21,7 @@ df['Rainfall'].max() #essentially gives answer since only one option has max rai
 # #################
 # Solution 2
 import pandas as pd
-df = pd.read_csv('aus_weather.csv')
+df = pd.read_csv('./csv/aus_weather.csv')
 
 # the most likely temperature at 9am (Temp9am) in Melbourne
 df = df[df["Location"] == "Melbourne"].agg('Temp9am')

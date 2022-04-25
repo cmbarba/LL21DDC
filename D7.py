@@ -4,7 +4,7 @@
 
 import pandas as pd
 import statistics
-df = pd.read_csv('fc_barcelona.csv')
+df = pd.read_csv('./csv/fc_barcelona.csv')
 df.head()
 
 points = df.Pts

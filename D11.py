@@ -3,7 +3,7 @@
 # Provided
 
 import pandas as pd
-df = pd.read_csv('dubai_properties_data.csv')
+df = pd.read_csv('./csv/dubai_properties_data.csv')
 df.head()
 
 # Work
@@ -15,7 +15,7 @@ df1 = df.groupby(['neighborhood']).agg({'price' : ['max','min']})
 # #####################
 # Solution 2
 import pandas as pd
-df = pd.read_csv('dubai_properties_data.csv')
+df = pd.read_csv('./csv/dubai_properties_data.csv')
 
 # Save grouped by table into variable
 difference = df.groupby(['neighborhood']).agg({'price' : 'max'}) - df.groupby(['neighborhood']).agg({'price' : 'min'})

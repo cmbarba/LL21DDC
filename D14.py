@@ -4,7 +4,7 @@
 
 # We will be using data that contains traffic information for New Zealand during the year 2020.
 import pandas as pd
-df = pd.read_csv('nz_car_traffic.csv')
+df = pd.read_csv('./csv/nz_car_traffic.csv')
 df.head()
 
 # Work
