@@ -1,2 +1,2 @@
 # Lighthouse Labs 21 Day Data Challenge
-A repository for all code generated for the 21 Day Data Challenge by Lighthouse Labs
+A repository for all code generated for the 21 Day Data Challenge by Lighthouse Labs. Additional files (.csv, .db) taken from https://github.com/YWondimu/CSV-Files-For-LHL-21-Day-Python-Challenge
