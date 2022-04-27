@@ -5,7 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('toyota_cars.csv')
+df = pd.read_csv('./csv/toyota_cars.csv')
 
 ## Work ##
 
