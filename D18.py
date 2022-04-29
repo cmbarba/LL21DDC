@@ -5,7 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('thai_tourism.csv')
+df = pd.read_csv('./csv/thai_tourism.csv')
 df.head()
 
 ## Work ##
