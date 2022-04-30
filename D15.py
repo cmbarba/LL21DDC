@@ -29,7 +29,7 @@ len(females)
 
 import sqlite3
 import pandas as pd
-conn = sqlite3.connect("himalayas.db")
+conn = sqlite3.connect("./csv/himalayas.db")
 
 
 # How to actually locate the tables data available 
