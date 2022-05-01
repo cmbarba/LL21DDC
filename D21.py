@@ -71,14 +71,13 @@ while i < len(city_mapper):
 real_dist.insert(1,(0,16))
 
 i = 0
-trip = []
+trip = 0
 for x in dist_list:
     if x[0] == real_dist[i][0] and x[1] == real_dist[i][1]:
-        trip.append(x[2])
+        trip = trip + (x[2])
         i += 1
 
-dist = sum(trip)
-dif = dist - best_fitness
+dif = trip - best_fitness
 print('Difference in distance: ',dif)
 
 ## Given Solution ##
