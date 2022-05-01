@@ -5,7 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import sqlite3
-conn = sqlite3.connect("world.db")
+conn = sqlite3.connect("./csv/world.db")
 
 ## Work ##
 
